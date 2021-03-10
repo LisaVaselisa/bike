@@ -1,9 +1,9 @@
 // Шрифты
-$font-text: "Montserrat", "Arial", sans-serif;
+$font-text: "Open Sans", "Arial", sans-serif;
 
 // Размеры экрана
 $desktop-width: 1024px;
-$tablet-width: 768px;
+$tablet-width: 1023px;
 $mobile-width: 767px;
 $retina-dpi: 144dpi;
 $retina-dppx: 1.5dppx;
@@ -16,6 +16,7 @@ $color-black: #000000;
 $color-blacklight: rgba(0, 0, 0, 0.5);
 $color-grayhard: #1f1f1f;
 $color-blue: #0ad9c6;
+$color-background: #e5e5e5;
 $color-backgrounddark: #131314;
 $color-backgroundlight: #f6f7f9;
 $color-border: rgba(255, 255, 255, 0.2);

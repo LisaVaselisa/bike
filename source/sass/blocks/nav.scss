@@ -1,3 +1,35 @@
-.nav-list {
+.nav {
+  position: absolute;
+  min-width: 874px;
+  transform: translate(-50%);
+  left: 50%;
+  border-bottom: 1px solid $color-border;
+}
+
+.nav__list {
   @include no-list;
+  font-size: 16px;
+  line-height: 32px;
+  font-weight: 300;
+  color: $color-whiteopac07;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nav__item a {
+  padding-top: 21px;
+  padding-bottom: 9px;
+}
+
+.nav__item:not(:first-child):not(:last-child) a {
+  padding: 67px;
+}
+
+.nav__item:first-child a {
+  padding-right: 67px;
+}
+
+.nav__item:last-child a {
+  padding-left: 67px;
 }

@@ -1,65 +1,78 @@
 .service {
   color: $color-white;
-  background: url("../img/desktop-background@1x.jpg") no-repeat left center;
+  background: url("../img/desktop-background@1x.jpg") no-repeat top center;
   background-size: cover;
   min-height: 825px;
+  padding-top: 318px;
   padding-bottom: 150px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background: url("../img/desktop-background@2x.jpg") no-repeat;
     background-size: cover;
   }
+
+  @media (max-width: $tablet-width-max) {
+    background: url("../img/tablet-background@1x.jpg") no-repeat top center;
+    min-height: 340px;
+    padding: 0;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/tablet-background@2x.jpg") no-repeat;
+    }
+  }
+
+  @media (max-width: $mobile-width-max) {
+    background: url("../img/mobile-background@1x.jpg") no-repeat top center;
+    min-height: 390px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/mobile-background@2x.jpg") no-repeat;
+    }
+  }
 }
 
 .service__wrap {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 160px;
-  padding-top: 318px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding-bottom: 80px;
+
+  @media (max-width: $tablet-width-max) {
+    flex-direction: column;
+  }
 }
 
-.service__info h2 {
+.service__info {
+  width: 45%;
+
+  @media (max-width: $tablet-width-max) {
+    width: 100%;
+  }
+}
+
+.service__text {
+  @media (max-width: $tablet-width-max) {
+    text-align: center;
+  }
+}
+
+.service__text b {
   font-size: 46px;
   line-height: 64px;
+
+  @media (max-width: $tablet-width-max) {
+    font-size: 30px;
+    line-height: 42px;
+  }
 }
 
-.service__info p {
+.service__text p {
   font-size: 20px;
   line-height: 32px;
   font-weight: 300;
   color: $color-whiteopac08;
-}
 
-
-.service__form-list {
-  @include no-list;
-}
-
-.service__form-item {
-  margin-bottom: 20px;
-}
-
-.service__form-item input {
-  font-size: 15px;
-  line-height: 24px;
-  font-weight: 400;
-  color: $color-form;
-  border: 1px solid $color-borderlight;
-  border-radius: 4px;
-  padding-top: 12px;
-  padding-left: 29px;
-  padding-bottom: 12px;
-  width: 100%;
-}
-
-.service__form-btn {
-  font-size: 15px;
-  line-height: 21px;
-  font-weight: 600;
-  background-color: $color-blue;
-  border: 1px solid $color-blue;
-  border-radius: 4px;
-  width: 100%;
-  height: 48px;
+  @media (max-width: $tablet-width-max) {
+    font-size: 18px;
+  }
 }

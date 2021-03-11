@@ -15,12 +15,16 @@ body {
   letter-spacing: -0.5px;
   color: $color-black;
   font-weight: 400;
-  background-color: $color-background;
+  background-color: $color-white;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   min-width: 320px;
   min-height: 100%;
+
+  @media (max-width: $mobile-width-max) {
+    font-size: 18px;
+  }
 }
 
 a {

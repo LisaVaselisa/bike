@@ -6,13 +6,13 @@
     padding: 0 30px;
   }
 
-  // @media (max-width: $tablet-width-max) {
-  //   max-width: $tablet-width-max;
-  //   padding: 0 35px;
-  //   width: auto;
-  // }
+  @media (max-width: $tablet-width-max) {
+    max-width: $tablet-width-max;
+    padding: 0 30px;
+  }
 
-  // @media (max-width: $mobile-width-max) {
-  //   padding: 0 15px;
-  // }
+  @media (max-width: $mobile-width-max) {
+    max-width: $mobile-width-max;
+    padding: 0 15px;
+  }
 }

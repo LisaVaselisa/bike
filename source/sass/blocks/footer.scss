@@ -1,0 +1,38 @@
+.footer p {
+  font-size: 17px;
+  line-height: 31px;
+  color: $color-blackopac07;
+  text-align: center;
+}
+
+.footer__map iframe {
+  border: none;
+  width: 100%;
+}
+
+.footer__list {
+  @include no-list;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-blackopac05;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+
+  @media (max-width: $mobile-width-max) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.footer__item a {
+  &:hover,
+  &:focus {
+    color: $color-black;
+  }
+
+  &:active {
+    color: $color-blue;
+  }
+}

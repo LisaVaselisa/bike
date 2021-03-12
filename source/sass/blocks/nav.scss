@@ -1,13 +1,13 @@
 .nav {
   position: absolute;
   min-width: 874px;
-  transform: translate(-50%);
   left: 50%;
+  transform: translate(-50%);
   border-bottom: 1px solid $color-border;
 
   @media (max-width: $tablet-width-max) {
+    // position: relative;
     border: none;
-    // width: 320px;
   }
 }
 
@@ -20,6 +20,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding: 0 10px;
 
   @media (max-width: $tablet-width-max) {
     font-size: 20px;
@@ -31,9 +32,14 @@
   }
 }
 
+.nav__item {
+  cursor: pointer;
+}
+
 .nav__item a {
   padding-top: 21px;
   padding-bottom: 9px;
+  display: block;
 
   &:hover,
   &:focus {
@@ -46,7 +52,8 @@
 }
 
 .nav__item:not(:first-child):not(:last-child) a {
-  padding: 67px;
+  padding-right: 67px;
+  padding-left: 67px;
 
   @media (max-width: $tablet-width-max) {
     padding: 0;

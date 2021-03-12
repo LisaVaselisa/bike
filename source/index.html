@@ -35,7 +35,7 @@
         </nav>
 
         <section class="service">
-          <div class="service__wrap container">
+          <div class="service__wrap">
             <div class="service__info">
                <a class="service__link">
                 <img src="img/logo.svg" width="68" height="20" alt="Логотип магазина Moon">
@@ -66,14 +66,15 @@
 
     <main class="main ">
       <h1 class="visually-hidden">Moon - магазин веловипедов</h1>
+
         <section class="about container" id="about">
           <h2 class="main-title">Несколько фактов о нас</h2>
-          <ul class="about__list">
+          <ol class="about__list">
             <li>Самый широкий выбор велосипедов!</li>
             <li>Доставка велосипедов по всей России!</li>
             <li>Большой выбор крутых аксессуаров!</li>
             <li>Профессиональные консультации!</li>
-          </ul>
+          </ol>
         </section>
 
 
@@ -82,6 +83,15 @@
           <h2 class="main-title">Виды велосипедов</h2>
           <ul class="products__list">
             <li class="products__item">
+
+              <!--
+                 1х: 270px; 2x: 540px <source media="(max-width: 767px)" srcset="img/road-bike-mobile@1x.webp 1x, img/road-bike-mobile@2x.webp 2x" type="image/webp">
+                1х: 270px; 2x: 540px<source media="(max-width: 1023px)" srcset="img/road-bike-tablet@1x.webp 1x, img/road-bike-tablet@2x.webp 2x" type="image/webp">
+                1х: 342px; 2x: 684px <source srcset="img/road-bike-desktop@1x.webp 1x, img/road-bike-desktop@2x.webp 2x" type="image/webp">
+                1х: 270px; 2x: 540px <source media="(max-width: 767px)" srcset="img/road-bike-mobile@1x.png 1x, img/road-bike-mobile@2x.png 2x">
+                1х: 270px; 2x: 540px <source media="(max-width: 1023px)" srcset="img/road-bike-tablet@1x.png 1x, img/road-bike-tablet@2x.png 2x">
+                1х: 342px; 2x: 684px <img class="types__img types__img--first" src="img/road-bike-desktop@1x.png" srcset="img/road-bike-desktop@2x.png 2x" loading="lazy" width="342" height="503" alt="пример дорожного велосипеда">-->
+
               <!-- <picture>
               <source type="image/webp" media="(min-width: 320px)" srcset="img/mobile-road-bike.webp 1x, img/mobile-road-bike@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/tablet-road-bike@1x.webp 1x, img/tablet-road-bike@2x.webp 2x">

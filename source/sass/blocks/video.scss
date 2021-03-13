@@ -1,5 +1,6 @@
 .video {
-  background-color: $color-backgrounddark;
+  background-image: linear-gradient(to bottom, $color-readient 87%, $color-white 87%);
+  padding-top: 120px;
 }
 
 .video h2 {
@@ -7,13 +8,14 @@
   margin: 0;
 }
 
-
 .video p {
   font-size: 16px;
   line-height: 28px;
   font-weight: 300;
   color: $color-whiteopac07;
   text-align: center;
+  width: 30%;
+  margin: 20px auto 56px auto;
 }
 
 .video img {

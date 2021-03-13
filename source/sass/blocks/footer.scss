@@ -1,8 +1,14 @@
+.footer__contacts h2 {
+  margin: 0;
+}
+
 .footer p {
   font-size: 17px;
   line-height: 31px;
   color: $color-blackopac07;
   text-align: center;
+  margin: 30px auto;
+  width: 80%;
 }
 
 .footer__map iframe {

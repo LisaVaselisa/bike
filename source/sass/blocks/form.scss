@@ -1,5 +1,5 @@
 .form {
-  width: 327px;
+  width: 45.5%;
 
   @media (max-width: $tablet-width-max) {
     width: 321px;
@@ -70,6 +70,6 @@
   }
 
   &:active {
-    background-color: $color-blue;
+    background-color: $color-green;
   }
 }

@@ -1,5 +1,5 @@
 .video {
-  background-image: linear-gradient(to bottom, $color-readient 87%, $color-white 87%);
+  background-image: linear-gradient(to bottom, $color-readient 85%, $color-white 85%);
   padding-top: 120px;
 }
 
@@ -14,11 +14,49 @@
   font-weight: 300;
   color: $color-whiteopac07;
   text-align: center;
-  width: 30%;
+  width: 34%;
   margin: 20px auto 56px auto;
+
+  @media (max-width: $tablet-width-max) {
+    width: 65%;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    width: 100%;
+  }
 }
 
-.video img {
+.video__wrap {
+  position: relative;
+}
+
+.video__wrap img {
   display: block;
   margin: auto;
+
+  @media (max-width: $tablet-width-max) {
+    padding: 0 17%;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    padding: 0 16px;
+  }
+}
+
+.video__button {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  top: calc(50% - 38px);
+  left: calc(50% - 38px);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }

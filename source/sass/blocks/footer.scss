@@ -12,8 +12,19 @@
 }
 
 .footer__map iframe {
+  display: block;
   border: none;
-  width: 100%;
+  width: 957px;
+  margin: auto;
+
+  @media (max-width: $tablet-width-max) {
+    width: 100%;
+    padding: 0 35px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    padding: 0;
+  }
 }
 
 .footer__list {

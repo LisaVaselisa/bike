@@ -1,13 +1,30 @@
+
 .nav {
   position: absolute;
-  min-width: 874px;
   left: 50%;
   transform: translate(-50%);
   border-bottom: 1px solid $color-border;
 
   @media (max-width: $tablet-width-max) {
-    // position: relative;
+    position: relative;
     border: none;
+  }
+}
+
+.nav__toggle {
+  display: none;
+
+  @media (max-width: $tablet-width-max) {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: url("../img/icon-menu.svg") no-repeat center;
+    background-color: $color-blue;
+    border: none;
+    top: 0;
+    right: 0;
+    cursor: pointer;
   }
 }
 
@@ -18,9 +35,10 @@
   font-weight: 300;
   color: $color-whiteopac07;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 10px;
+  flex-wrap: wrap;
+  width: 873px;
+  padding: 0 17px;
 
   @media (max-width: $tablet-width-max) {
     font-size: 20px;
@@ -28,18 +46,50 @@
     font-weight: 400;
     color: $color-nav;
     flex-direction: column;
+    width: 100%;
+    padding: 70px 0 138px 0;
     display: none;
   }
 }
 
+// .nav__list .nav__list--nojs {
+//   @media (max-width: $tablet-width-max) {
+//     display: none;
+//   }
+// }
+
+// .nav__list .nav__list--open {
+//   @media (max-width: $tablet-width-max) {
+//     display: block;
+//   }
+// }
+
 .nav__item {
+  position: relative;
   cursor: pointer;
+
+  @media (max-width: $tablet-width-max) {
+    margin-top: 30px;
+    background-color: $color-backgroundnav;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-top: 3px solid $color-arrow;
+      border-right: 3px solid $color-arrow;
+      transform: rotate(45deg);
+      right: 18px;
+      bottom: 18px;
+    }
+  }
 }
 
 .nav__item a {
+  display: block;
   padding-top: 21px;
   padding-bottom: 9px;
-  display: block;
 
   &:hover,
   &:focus {
@@ -49,29 +99,25 @@
   &:active {
     color: $color-blue;
   }
-}
-
-.nav__item:not(:first-child):not(:last-child) a {
-  padding-right: 67px;
-  padding-left: 67px;
 
   @media (max-width: $tablet-width-max) {
-    padding: 0;
+    padding-left: 16px;
+
+    &:hover,
+    &:focus {
+      color: $color-black;
+    }
+
+    &:active {
+      color: $color-blue;
+    }
   }
 }
 
-.nav__item:first-child a {
-  padding-right: 67px;
+.nav__item:not(:last-child) a {
+  padding-right: 134px;
 
   @media (max-width: $tablet-width-max) {
-    padding: 0;
-  }
-}
-
-.nav__item:last-child a {
-  padding-left: 67px;
-
-  @media (max-width: $tablet-width-max) {
-    padding: 0;
+    padding-right: 50px;
   }
 }

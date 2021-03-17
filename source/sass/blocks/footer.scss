@@ -1,5 +1,6 @@
-.footer__contacts h2 {
-  margin: 0;
+.footer {
+  padding-top: 126px;
+  margin-bottom: 96px;
 }
 
 .footer p {
@@ -7,8 +8,22 @@
   line-height: 31px;
   color: $color-blackopac07;
   text-align: center;
-  margin: 30px auto;
-  width: 80%;
+  margin: 30px auto 38px auto;
+  width: 40%;
+}
+
+.footer__map {
+  color: $color-white;
+  background: url("../img/desktop-map@1x.png") no-repeat top center;
+  background-size: cover;
+  width: 957px;
+  min-height: 530px;
+  margin: auto;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: url("../img/desktop-map@2x.png") no-repeat top center;
+    background-size: cover;
+  }
 }
 
 .footer__map iframe {
@@ -35,7 +50,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  margin-top: 36px;
 
   @media (max-width: $mobile-width-max) {
     flex-direction: column;
@@ -43,13 +58,24 @@
   }
 }
 
+.footer__item:not(:last-child) {
+  margin-right: 70px;
+}
+
 .footer__item a {
+  padding: 10px 30px;
+  margin: auto;
   &:hover,
   &:focus {
-    color: $color-black;
+    opacity: 0.5;
   }
 
   &:active {
     color: $color-blue;
+    opacity: 1;
   }
+}
+
+.footer__item svg {
+  fill: none;
 }

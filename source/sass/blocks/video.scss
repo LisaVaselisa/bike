@@ -1,6 +1,6 @@
 .video {
-  background-image: linear-gradient(to bottom, $color-readient 85%, $color-white 85%);
-  padding-top: 120px;
+  background-image: linear-gradient(to bottom, $color-gradient 88%, $color-white 88%);
+  padding-top: 121px;
 }
 
 .video h2 {
@@ -28,6 +28,7 @@
 
 .video__wrap {
   position: relative;
+  min-height: 522px;
 }
 
 .video__wrap img {
@@ -47,7 +48,7 @@
   position: absolute;
   background-color: transparent;
   border: none;
-  top: calc(50% - 38px);
+  top: calc(50% - 36px);
   left: calc(50% - 38px);
   cursor: pointer;
 

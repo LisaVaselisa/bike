@@ -3,12 +3,14 @@
   background: url("../img/desktop-background@1x.jpg") no-repeat top center;
   background-size: cover;
   background-color: $color-black;
+  min-height: 825px;
   padding-top: 318px;
   padding-bottom: 175px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background: url("../img/desktop-background@2x.jpg") no-repeat top center;
     background-size: cover;
+    min-height: 100%;
   }
 
   @media (max-width: $tablet-width-max) {
@@ -36,7 +38,7 @@
 }
 
 .service__info {
-  width: 48%;
+  width: 400px;
 
   @media (max-width: $tablet-width-max) {
     width: 100%;
@@ -128,7 +130,7 @@
 }
 
 .service__form {
-  width: 37.2%;
+  width: 327px;
 
   @media (max-width: $tablet-width-max) {
     width: 324px;

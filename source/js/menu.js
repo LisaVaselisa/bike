@@ -1,8 +1,6 @@
-
 'use strict';
 
 // Меню
-
 var navList = document.querySelector('.nav__list');
 var navToggle = document.querySelector('.nav__toggle');
 

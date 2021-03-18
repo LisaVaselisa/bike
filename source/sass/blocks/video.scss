@@ -1,6 +1,16 @@
 .video {
   background-image: linear-gradient(to bottom, $color-gradient 88%, $color-white 88%);
   padding-top: 121px;
+
+  @media (max-width: $tablet-width-max) {
+    background-image: linear-gradient(to bottom, $color-gradient 83%, $color-white 83%);
+    padding-top: 70px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    background-image: linear-gradient(to bottom, $color-gradient 88%, $color-white 88%);
+    padding-top: 85px;
+  }
 }
 
 .video h2 {
@@ -19,16 +29,26 @@
 
   @media (max-width: $tablet-width-max) {
     width: 65%;
+    margin-bottom: 38px;
   }
 
   @media (max-width: $mobile-width-max) {
     width: 100%;
+    margin-bottom: 55px;
   }
 }
 
 .video__wrap {
   position: relative;
   min-height: 522px;
+
+  @media (max-width: $tablet-width-max) {
+    min-height: 282px;
+  }
+
+  @media (max-width: $mobile-width-max) {
+    min-height: 161px;
+  }
 }
 
 .video__wrap img {
@@ -52,6 +72,11 @@
   left: calc(50% - 38px);
   cursor: pointer;
 
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
   &:hover,
   &:focus {
     transform: scale(1.2);
@@ -61,3 +86,4 @@
     opacity: 0.5;
   }
 }
+

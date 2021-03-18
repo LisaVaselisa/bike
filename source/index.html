@@ -11,14 +11,14 @@
     <link rel="preload" href="fonts/opensans-semibold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="body">
     <div style="display: none;">
       <include src="build/img/sprite.svg"></include>
     </div>
     <header class="header">
       <nav class="nav">
         <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
-        <ul class="nav__list nav__list--nojs">
+        <ul class="nav__list nav__list--open nav__list--nojs">
           <li class="nav__item">
             <a href="#about">О нас</a>
           </li>
@@ -33,7 +33,6 @@
           </li>
         </ul>
       </nav>
-
       <section class="service">
         <div class="service__wrap">
           <div class="service__info">
@@ -45,7 +44,6 @@
               <p>Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
             </div>
           </div>
-
           <form class="service__form form" action="https://echo.htmlacademy.ru" method="post">
             <h2 class="form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
             <ul class="form__list">
@@ -63,10 +61,8 @@
         </div>
       </section>
     </header>
-
     <main class="main ">
       <h1 class="visually-hidden">Moon - магазин веловипедов</h1>
-
       <section class="about container" id="about">
         <h2 class="main-title">Несколько фактов о нас</h2>
         <ol class="about__list">
@@ -116,7 +112,6 @@
           </ul>
         </div>
       </section>
-
       <section class="video" id="video">
         <div class="container">
           <h2 class="main-title">Видео про велосипеды</h2>
@@ -139,33 +134,31 @@
         </div>
       </section>
     </main>
-
     <footer class="footer">
       <section class="footer__contacts" id="contacts">
         <h2 class="main-title">Как нас найти?</h2>
         <p>Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
         <div class="footer__map">
           <iframe class="contacts__map-iframe"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1589733413226!5m2!1sru!2sru"
-          height="530" aria-label="Интерактивная карта" tabindex="0"></iframe>
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1589733413226!5m2!1sru!2sru"
+            height="530" aria-label="Интерактивная карта" tabindex="0">
+          </iframe>
+          <picture>
+            <!-- 1х: 320px; 2x: 640px --><source media="(max-width: 767px)" srcset="img/mobile-map@1x.webp 1x, img/mobile-map@2x.webp 2x" type="image/webp">
+            <!-- 1х: 698px; 2x: 1396px --><source media="(max-width: 1023px)" srcset="img/tablet-map@1x.webp 1x, img/tablet-map@2x.webp 2x" type="image/webp">
+            <!-- 1х: 957px; 2x: 1914px --><source srcset="img/desktop-map@1x.webp 1x, img/desktop-map@2x.webp 2x" type="image/webp">
+            <!-- 1х: 320px; 2x: 640px --><source media="(max-width: 767px)" srcset="img/mobile-map@1x.png 1x, img/mobile-map@2x.png 2x">
+            <!-- 1х: 698px; 2x: 1396px --><source media="(max-width: 1023px)" srcset="img/tablet-map@1x.png 1x, img/tablet-map@2x.png 2x">
+            <!-- 1х: 957px; 2x: 1914px --><img src="img/desktop-map@1x.png"  srcset="img/desktop-map@2x.png 2x" width="957" height="530"  alt="Карта">
+          </picture>
         </div>
       </section>
-      <ul class="footer__list">
-        <li class="footer__item">
-          <a href="#" aria-label="Электронная почта">
-            <svg width="26" height="20">
-              <use xlink:href="#icon-mail"></use>
-            </svg>
-            <span>puteshestviemechta@gmail.ru</span>
-          </a>
+      <ul class="footer__list container">
+        <li class="footer__item footer__item--mail">
+          <a href="#" aria-label="Электронная почта">puteshestviemechta@gmail.ru</a>
         </li>
-        <li class="footer__item">
-          <a href="tel:+849978468446" aria-label="Номер телефона">
-            <svg width="21" height="22">
-              <use xlink:href="#icon-phone"></use>
-            </svg>
-            <span>+7 (499) -784-684-46</span>
-          </a>
+        <li class="footer__item footer__item--phone">
+          <a href="tel:+849978468446" aria-label="Номер телефона">+7 (499) -784-684-46</a>
         </li>
       </ul>
     </footer>

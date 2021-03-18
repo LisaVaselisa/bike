@@ -41,8 +41,9 @@
 
   @media (max-width: $mobile-width-max) {
     grid-template-columns: repeat(1, 1fr);
-    gap: 41px;
-    padding: 0;
+    gap: 42px;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
@@ -66,8 +67,4 @@
     left: 50%;
     transform: translate(-50%);
   }
-
-  // @media (max-width: $tablet-width-max) {
-  //   width: 35%;
-  // }
 }

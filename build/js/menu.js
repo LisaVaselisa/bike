@@ -1,76 +1,34 @@
-
 'use strict';
 
-// Меню
-// var body = document.querySelector('body');
-var navList = document.querySelector('.nav__list');
+var menuNav = document.querySelector('.nav');
 var navToggle = document.querySelector('.nav__toggle');
-// var menuLinks = document.querySelectorAll('.main-nav__item-link');
+var body = document.querySelector('.body');
+var navLink = document.querySelectorAll('.nav__link');
 
+function changeMenuPosition() {
+  menuNav.classList.toggle('nav--close');
+  menuNav.classList.toggle('nav--open');
+}
 
-navList.classList.remove('nav__list--nojs');
-navToggle.addEventListener('click', function() {
-  navList.classList.toggle('nav__list--close');
-});
+if (menuNav && navToggle) {
+  menuNav.classList.remove('nav--nojs');
 
+  navToggle.addEventListener('click', function () {
+    changeMenuPosition();
+    body.classList.toggle('body__js');
+  });
 
+  // navToggle.onclick = function () {
+  //   changeMenuPosition();
+  //   body.classList.toggle('body__js');
+  // };
 
-// function menuPosition() {
-//   navList.classList.toggle('nav__list--close');
-//   navList.classList.toggle('nav__list--open');
-// }
+  navLink.forEach(function (item) {
+    item.addEventListener('click', function ()  {
+      changeMenuPosition();
+      body.classList.remove('body__js');
+    });
+  });
 
-// if (navList && navToggle) {
-//   navList.classList.remove('nav__list--nojs');
-
-//   navToggle.onclick = function () {
-//     menuPosition();
-//     body.classList.toggle('body__js');
-//   };
-// }
-
-//   menuLinks.forEach(function (item) {
-    //     item.onclick = function () {
-    //       changeStateMenu();
-    //       body.classList.remove('body__js-menu');
-    //     };
-    //   });
-
-    //   changeStateMenu();
-    // }
-
-
-
-
-
-
-
-
-
-// var navMain = document.querySelector('.main-nav');
-// var navToggle = document.querySelector('.main-nav__toggle');
-// var body = document.querySelector('.body');
-// var menuLinks = document.querySelectorAll('.main-nav__item-link');
-
-// function changeStateMenu() {
-//   navMain.classList.toggle('main-nav--closed');
-//   navMain.classList.toggle('main-nav--opened');
-// }
-
-// if (navMain && navToggle) {
-//   navMain.classList.remove('main-nav--nojs');
-
-//   navToggle.onclick = function () {
-//     changeStateMenu();
-//     body.classList.toggle('body__js-menu');
-//   };
-
-//   menuLinks.forEach(function (item) {
-//     item.onclick = function () {
-//       changeStateMenu();
-//       body.classList.remove('body__js-menu');
-//     };
-//   });
-
-//   changeStateMenu();
-// }
+  changeMenuPosition();
+}

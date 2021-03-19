@@ -23,14 +23,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 19.4% 45px 19.4%;
-
-  @media (max-width: 1350px) {
-    padding-left: 9%;
-    padding-right: 9%;
-  }
+  width: 879px;
+  padding-top: 0;
+  padding-bottom: 45px;
+  margin: auto;
 
   @media (max-width: $tablet-width-max) {
+    width: 100%;
     flex-direction: column;
     padding: 0;
   }

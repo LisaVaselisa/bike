@@ -53,7 +53,7 @@
               </li>
               <li class="form__item">
                 <label class="visually-hidden" for="phone">Введите Ваш номер телефона</label>
-                <input type="tel" id="phone" name="phone" placeholder="Введите Ваш номер телефона" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$" title="Укажите номер телефна из 12 цифр" required="">
+                <input type="tel" data-mask="+7 (000) 000-00-00" id="phone" name="phone" placeholder="Введите Ваш номер телефона" title="(000) 000-00-00" pattern="^((+7|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$" required="">
               </li>
             </ul>
             <button class="form__btn" type="submit">Подобрать велосипед мечты</button>
@@ -61,7 +61,7 @@
         </div>
       </section>
     </header>
-    <main class="main ">
+    <main class="main">
       <h1 class="visually-hidden">Moon - магазин веловипедов</h1>
       <section class="about container" id="about">
         <h2 class="main-title">Несколько фактов о нас</h2>

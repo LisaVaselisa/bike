@@ -1,16 +1,3 @@
-
-.nav {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  border-bottom: 1px solid $color-border;
-
-  @media (max-width: $tablet-width-max) {
-    position: relative;
-    border: none;
-  }
-}
-
 .nav__toggle {
   display: none;
 
@@ -32,10 +19,14 @@
 
 .nav__list {
   @include no-list;
+  position: absolute;
   font-size: 16px;
   line-height: 32px;
   font-weight: 300;
   color: $color-whiteopac07;
+  left: 50%;
+  transform: translate(-50%);
+  border-bottom: 1px solid $color-border;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -43,6 +34,7 @@
   padding: 0 20px;
 
   @media (max-width: $tablet-width-max) {
+    position: relative;
     font-size: 20px;
     line-height: 28px;
     font-weight: 400;
